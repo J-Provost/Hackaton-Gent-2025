@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fantasy Garage Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Test</h1>
+
+<div class="section" id="leaderboard">
+    <h2>Leaderboard</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Speler</th>
+                <th>Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Ralph</td><td>1</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="section" id="fantasy-team">
+    <h2>Jouw Fantasy Team</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Categorie</th>
+                <th>Gekozen Werknemer</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Time value</td><td>Sven</td></tr><tr><td>Coffee</td><td>Lisa</td></tr><tr><td>Tires changed</td><td>Lisa</td></tr><tr><td>Returns</td><td>Lisa</td></tr><tr><td>Service score</td><td>Sven</td></tr><tr><td>Lateness</td><td>Sven</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="section" id="employees">
+    <h2>Alle Werknemers</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Naam</th>
+                <th>Functie</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>Ralph</td><td>90</td><td>15</td><td>35</td><td>1</td><td>92</td><td>3</td></tr><tr><td>Sven</td><td>85</td><td>10</td><td>40</td><td>2</td><td>88</td><td>5</td></tr><tr><td>Lisa</td><td>95</td><td>7</td><td>30</td><td>0</td><td>94</td><td>1</td></tr><tr><td>Kenny</td><td>80</td><td>18</td><td>25</td><td>3</td><td>85</td><td>6</td></tr><tr><td>Fatima</td><td>88</td><td>12</td><td>20</td><td>1</td><td>90</td><td>2</td></tr>
+        </tbody>
+    </table>
+</div>
+<div class="section">
+    <h2>Admin Controls</h2>
+    <button onclick="clearLeaderboard()">Clear Leaderboard</button>
+    <button onclick="clearVotes()">Clear Votes</button>
+</div>
+
+</body>
+</html>
