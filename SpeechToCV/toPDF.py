@@ -6,7 +6,7 @@ import markdown2
 
 # Read the Markdown file
 def toPDF():
-    with open("Hackaton-Gent-2025/result.md", "r", encoding="utf-8") as md_file:
+    with open("Hackaton-Gent-2025/SpeechToCV/result.md", "r", encoding="utf-8") as md_file:
         markdown_content = md_file.read()
 
     # Convert Markdown to plain text (strip HTML tags)
@@ -20,6 +20,6 @@ def toPDF():
 
 
     # Save the PDF
-    pdf.output("response.pdf")
+    pdf.output("Hackaton-Gent-2025/SpeechToCV/response.pdf")
 
     print("PDF successfully created as 'response.pdf'")

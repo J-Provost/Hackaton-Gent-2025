@@ -3,11 +3,11 @@ import json
 
 
 def GeminiApiRequest():
-    with open("Hackaton-Gent-2025/API.json", "r") as api_file:
+    with open("Hackaton-Gent-2025/SpeechToCV/API.json", "r") as api_file:
         file = json.load(api_file)
         API_KEY = file["geminiAPI"]
 
-    with open("Hackaton-Gent-2025/script.txt") as file:
+    with open("Hackaton-Gent-2025/SpeechToCV/script.txt") as file:
         MESSAGE = file.read()
 
     client = genai.Client(api_key=API_KEY)
@@ -17,5 +17,5 @@ def GeminiApiRequest():
     )
 
     print(response.text)
-    with open("Hackaton-Gent-2025/result.md", "w") as file:
+    with open("Hackaton-Gent-2025/SpeechToCV/result.md", "w") as file:
         file.write(response.text[12:-6])
