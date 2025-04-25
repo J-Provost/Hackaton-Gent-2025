@@ -1,19 +1,17 @@
 import assemblyai as aai
-
-# audio_file = "./local_file.mp3"
-
-audio_file = "https://assembly.ai/wildfires.mp3"
+import json
 
 
-config = aai.TranscriptionConfig(speech_model=aai.SpeechModel.best)
+def speech_to_text(audio_file) -> str:
+    with open("Hackaton-Gent-2025/API.json", "r") as api_file:
+        file = json.load(api_file)
+        API_KEY = file["assemblyAI"]
 
+    aai.settings.api_key = API_KEY
+    config = aai.TranscriptionConfig(speech_model=aai.SpeechModel.slam_1)
 
-transcript = aai.Transcriber(config=config).transcribe(audio_file)
+    transcript = aai.Transcriber(config=config).transcribe(audio_file)
 
-
-if transcript.status == "error":
-
-  raise RuntimeError(f"Transcription failed: {transcript.error}")
-
-
-print(transcript.text)
+    if transcript.status == "error":
+        raise RuntimeError(f"Transcription failed: {transcript.error}")
+    return transcript.text
