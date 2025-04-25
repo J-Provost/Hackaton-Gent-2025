@@ -21,7 +21,7 @@ for categorie, keuzes in votes.items():
             vertrouwen[werknemer]["negatief"] += aantal
 
 # Schrijven naar .txt bestand
-with open("vertrouwensrapport.txt", "w", encoding="utf-8") as f:
+with open("rapporten/vertrouwensrapport.txt", "w", encoding="utf-8") as f:
     f.write("📊 Vertrouwensrapport per werknemer\n")
     f.write("Deze data is een overzicht van wat alle medewerkers denken dat ze het meest van doen.\n")
     f.write("====================================\n\n")
