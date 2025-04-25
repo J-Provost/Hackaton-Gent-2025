@@ -1,0 +1,50 @@
+📊 Vertrouwensrapport per werknemer
+Deze data is een overzicht van wat alle medewerkers denken dat ze het meest van doen.
+====================================
+
+👤 Sven
+  ↪ Positieve stemmen: 10
+  ↪ Negatieve stemmen: 4
+  ↪ Vertrouwensscore: 6
+  ↪ Stemmen per categorie:
+    - time_value: 3
+    - coffee: 3
+    - tires_changed: 2
+    - returns: 2
+    - service_score: 3
+    - lateness: 1
+
+👤 Ralph
+  ↪ Positieve stemmen: 3
+  ↪ Negatieve stemmen: 0
+  ↪ Vertrouwensscore: 3
+  ↪ Stemmen per categorie:
+    - time_value: 3
+
+👤 Lisa
+  ↪ Positieve stemmen: 9
+  ↪ Negatieve stemmen: 6
+  ↪ Vertrouwensscore: 3
+  ↪ Stemmen per categorie:
+    - coffee: 2
+    - tires_changed: 3
+    - returns: 3
+    - service_score: 3
+    - lateness: 4
+
+👤 Fatima
+  ↪ Positieve stemmen: 2
+  ↪ Negatieve stemmen: 0
+  ↪ Vertrouwensscore: 2
+  ↪ Stemmen per categorie:
+    - tires_changed: 1
+    - returns: 1
+
+👤 Kenny
+  ↪ Positieve stemmen: 0
+  ↪ Negatieve stemmen: 2
+  ↪ Vertrouwensscore: -2
+  ↪ Stemmen per categorie:
+    - coffee: 1
+    - lateness: 1
+
