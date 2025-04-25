@@ -4,6 +4,7 @@ import markdown2
 # pip install git+https://github.com/PyFPDF/fpdf2.git@master
 # pip install markdown2
 
+
 # Read the Markdown file
 def toPDF():
     with open("Hackaton-Gent-2025/SpeechToCV/result.md", "r", encoding="utf-8") as md_file:

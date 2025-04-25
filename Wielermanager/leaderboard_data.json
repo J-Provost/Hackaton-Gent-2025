@@ -28,5 +28,25 @@
             "service_score": "Sven",
             "lateness": "Lisa"
         }
+    },
+    "Elian": {
+        "picks": {
+            "time_value": "Sven",
+            "coffee": "Sven",
+            "tires_changed": "Lisa",
+            "returns": "Lisa",
+            "service_score": "Kenny",
+            "lateness": "Kenny"
+        }
+    },
+    "Test": {
+        "picks": {
+            "time_value": "Sven",
+            "coffee": "Sven",
+            "tires_changed": "Lisa",
+            "returns": "Lisa",
+            "service_score": "Lisa",
+            "lateness": "Lisa"
+        }
     }
 }

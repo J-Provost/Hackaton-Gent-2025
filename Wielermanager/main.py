@@ -77,7 +77,7 @@ with open("Wielermanager/leaderboard_data.json", "w", encoding="utf-8") as f:
 
 # 6. Update HTML automatisch
 def update_html(employees, leaderboard, fantasy_team):
-    with open("./wielermanager.html", "r", encoding="utf-8") as f:
+    with open("Wielermanager/wielermanager.html", "r", encoding="utf-8") as f:
         html_template = f.read()
 
     # Leaderboard invullen
