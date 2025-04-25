@@ -1,26 +1,30 @@
 {
     "time_value": {
-        "Ralph": 2,
-        "Sven": 2
+        "Ralph": 3,
+        "Sven": 3
     },
     "coffee": {
-        "Sven": 2,
-        "Lisa": 2
+        "Sven": 3,
+        "Lisa": 2,
+        "Kenny": 1
     },
     "tires_changed": {
         "Lisa": 3,
-        "Sven": 1
+        "Sven": 2,
+        "Fatima": 1
     },
     "returns": {
-        "Lisa": 2,
-        "Sven": 2
+        "Lisa": 3,
+        "Sven": 2,
+        "Fatima": 1
     },
     "service_score": {
-        "Lisa": 2,
-        "Sven": 2
+        "Lisa": 3,
+        "Sven": 3
     },
     "lateness": {
-        "Lisa": 3,
-        "Sven": 1
+        "Lisa": 4,
+        "Sven": 1,
+        "Kenny": 1
     }
 }
