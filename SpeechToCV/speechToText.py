@@ -3,7 +3,7 @@ import json
 
 
 def speech_to_text(audio_file) -> str:
-    with open("Hackaton-Gent-2025/API.json", "r") as api_file:
+    with open("Hackaton-Gent-2025/SpeechToCV/API.json", "r") as api_file:
         file = json.load(api_file)
         API_KEY = file["assemblyAI"]
 
@@ -15,3 +15,5 @@ def speech_to_text(audio_file) -> str:
     if transcript.status == "error":
         raise RuntimeError(f"Transcription failed: {transcript.error}")
     return transcript.text
+
+print(speech_to_text("Hackaton-Gent-2025/SpeechToCV/Silence Wench.mp3"))
