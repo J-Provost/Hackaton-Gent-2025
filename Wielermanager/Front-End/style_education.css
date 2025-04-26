@@ -39,8 +39,6 @@ body {
 }
 
 .brand-name {
-    display: flex;
-    justify-content: flex-start;
     font-family: "Paralucent-Medium", sans-serif;
     font-size: 32px;
     color: #000;
