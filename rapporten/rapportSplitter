@@ -52,7 +52,7 @@ def parse_employee_data(file_path: str) -> dict:
     
     return employees_data
 
-def save_employee_data(employees_data, output_dir="employee_data"):
+def save_employee_data(employees_data, output_dir="Hackaton-Gent-2025/rapporten/employee_data"):
     """Slaat elke medewerker zijn data als JSON file."""
     
     # Maakt directory als die nog niet bestaat

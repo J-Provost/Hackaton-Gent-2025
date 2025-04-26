@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style_talent.css">
+    <script src="leaderboard.js"></script>
 </head>
 <body>
     <nav class="navigation">
@@ -53,6 +54,7 @@
                   </div>
                 </div>
 
+                <div class="leaderboard-list" id="leaderboard-list">
                 <!-- Repeated for all 12 items -->
                 <div class="leaderboard-list" id="leaderboard-list">
                 <!-- Note: Implementation includes all 12 items, truncated for brevity -->
@@ -62,6 +64,9 @@
             </div>
             <button class="toggle-button" onclick="toggleList()">Toon meer</button>
           </section>
+        </div>
+      </main>
+      
       
           <section class="form-column">
             <div class="form-content">
@@ -69,40 +74,41 @@
                 <input
                   type="text"
                   class="text-input"
+                  id="player-name"
                   placeholder="Naam Toevoegen!"
                 />
               </div>
       
               <div class="textarea-group">
                 <label class="textarea-label">Meest Waard</label>
-                <textarea class="textarea-input" placeholder="Welke werknemer heeft de duurste reparaties gemaakt in de kortste tijd?"></textarea>
+                <textarea id="time_value" class="textarea-input" placeholder="Welke werknemer heeft de duurste reparaties gemaakt in de kortste tijd?"></textarea>
               </div>
-      
+              
               <div class="textarea-group">
                 <label class="textarea-label">Meest Koffie</label>
-                <textarea class="textarea-input" placeholder="Welke werknemer heeft de meeste koffies gedronken?"></textarea>
+                <textarea id="coffee" class="textarea-input" placeholder="Welke werknemer heeft de meeste koffies gedronken?"></textarea>
               </div>
-      
+              
               <div class="textarea-group">
                 <label class="textarea-label">Meest Banden</label>
-                <textarea class="textarea-input" placeholder="Welke werknemer heeft de meeste banden vervangen?"></textarea>
+                <textarea id="tires_changed" class="textarea-input" placeholder="Welke werknemer heeft de meeste banden vervangen?"></textarea>
               </div>
-      
+              
               <div class="textarea-group">
                 <label class="textarea-label">Best Kwalitiet</label>
-                <textarea class="textarea-input" placeholder="Welke "></textarea>
+                <textarea id="returns" class="textarea-input" placeholder="Wie had de minste retouren?"></textarea>
               </div>
-      
+              
               <div class="textarea-group">
                 <label class="textarea-label">Service</label>
-                <textarea class="textarea-input" placeholder="Uitleg ..."></textarea>
+                <textarea id="service_score" class="textarea-input" placeholder="Wie had de hoogste service score?"></textarea>
               </div>
-      
+              
               <div class="textarea-group">
                 <label class="textarea-label">Meest Telaat op werk</label>
-                <textarea class="textarea-input" placeholder="Uitleg ..."></textarea>
+                <textarea id="lateness" class="textarea-input" placeholder="Wie kwam het vaakst te laat?"></textarea>
               </div>
-            </div>
+              
           </section>
       
           <section class="users-column">
@@ -118,15 +124,15 @@
                     <h3 class="user-name">List item</h3>
                   </div>
                 </div>
-              </div>
-              <!-- Repeated for all 12 users -->
-              <!-- Note: Implementation includes all 12 items, truncated for brevity -->
-            </div>
+                <div class="users-list" id="users-list">
+                  <!-- Automatisch gevuld -->
+                </div>
+                
           </section>
         </div>
       </main>
       <div class="center-wrapper">
-        <button class="submit-button">Indienen</button>
+        <button onclick="handleSubmit()" class="submit-button">Indienen</button>
       </div>     
       <section class="cards-section">
         <div class="cards-header">

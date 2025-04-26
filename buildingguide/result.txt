@@ -1,0 +1,6 @@
+Jelle: Task Title=Cross the River Challenge, Role=Strategist, Individual Score=7, Team Score=8, Individual Feedback=Decent, Team Feedback=Great;
+David: Task Title=Cross the River Challenge, Role=Bridge Builder, Individual Score=4, Team Score=8, Individual Feedback=Could be better, Team Feedback=Great| Task Title=Build a Raft Challenge, Role=Captain, Individual Score=6, Team Score=4, Individual Feedback=Decent, Team Feedback=Poor;
+Ahmed: Task Title=Cross the River Challenge, Role=Communicator, Individual Score=2, Team Score=8, Individual Feedback=Poor, Team Feedback=Great| Task Title=Build a Raft Challenge, Role=Safety Officer, Individual Score=5, Team Score=4, Individual Feedback=Alright, Team Feedback=Poor;
+Quinten: Task Title=Cross the River Challenge, Role=Risk Taker, Individual Score=5, Team Score=8, Individual Feedback=Alright, Team Feedback=Great;
+Elian: Task Title=Build a Raft Challenge, Role=Engineer, Individual Score=7, Team Score=4, Individual Feedback=Good, Team Feedback=Poor;
+Ralph: Task Title=Build a Raft Challenge, Role=Builder, Individual Score=3, Team Score=4, Individual Feedback=Poor, Team Feedback=Poor;

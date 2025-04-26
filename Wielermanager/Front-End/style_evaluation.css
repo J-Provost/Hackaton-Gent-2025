@@ -401,3 +401,22 @@ hr {
 .social-icon:hover {
     background-color: #e6b935;
 }
+
+
+
+.iframe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.iframe-container iframe {
+    width: 100%;
+    height: 50vw;
+    /* Adjust height relative to viewport width */
+    border: none;
+}
