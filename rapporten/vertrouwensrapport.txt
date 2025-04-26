@@ -2,28 +2,28 @@
 Deze data is een overzicht van wat alle medewerkers denken dat ze het meest van doen.
 ====================================
 
+👤 Lisa
+  ↪ Positieve stemmen: 14
+  ↪ Negatieve stemmen: 7
+  ↪ Vertrouwensscore: 7
+  ↪ Stemmen per categorie:
+    - coffee: 2
+    - tires_changed: 5
+    - returns: 5
+    - service_score: 4
+    - lateness: 5
+
 👤 Sven
-  ↪ Positieve stemmen: 11
-  ↪ Negatieve stemmen: 5
+  ↪ Positieve stemmen: 12
+  ↪ Negatieve stemmen: 6
   ↪ Vertrouwensscore: 6
   ↪ Stemmen per categorie:
-    - time_value: 4
-    - coffee: 4
+    - time_value: 5
+    - coffee: 5
     - tires_changed: 2
     - returns: 2
     - service_score: 3
     - lateness: 1
-
-👤 Lisa
-  ↪ Positieve stemmen: 11
-  ↪ Negatieve stemmen: 6
-  ↪ Vertrouwensscore: 5
-  ↪ Stemmen per categorie:
-    - coffee: 2
-    - tires_changed: 4
-    - returns: 4
-    - service_score: 3
-    - lateness: 4
 
 👤 Ralph
   ↪ Positieve stemmen: 3

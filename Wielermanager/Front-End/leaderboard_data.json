@@ -7,7 +7,8 @@
             "returns": "Lisa",
             "service_score": "Sven",
             "lateness": "Sven"
-        }
+        },
+        "score": 1
     },
     "Jelle": {
         "picks": {
@@ -17,7 +18,8 @@
             "returns": "Lisa",
             "service_score": "Lisa",
             "lateness": "Kenny"
-        }
+        },
+        "score": 4
     },
     "Ahmed": {
         "picks": {
@@ -27,7 +29,8 @@
             "returns": "Fatima",
             "service_score": "Sven",
             "lateness": "Lisa"
-        }
+        },
+        "score": 1
     },
     "Elian": {
         "picks": {
@@ -37,16 +40,29 @@
             "returns": "Lisa",
             "service_score": "Kenny",
             "lateness": "Kenny"
-        }
+        },
+        "score": 2
     },
     "Test": {
         "picks": {
-            "time_value": "Sven",
-            "coffee": "Sven",
+            "time_value": "Lisa",
+            "coffee": "Lisa",
             "tires_changed": "Lisa",
             "returns": "Lisa",
             "service_score": "Lisa",
             "lateness": "Lisa"
-        }
+        },
+        "score": 3
+    },
+    "UKGVUV": {
+        "picks": {
+            "time_value": "Lisa",
+            "coffee": "Sven",
+            "tires_changed": "Sven",
+            "returns": "Kenny",
+            "service_score": "Sven",
+            "lateness": "Sven"
+        },
+        "score": 2
     }
 }
