@@ -1,0 +1,14 @@
+Member Name,Task Title,Role,Individual Score,Team Score,Individual Feedback,Team Feedback
+"Jelle","Cross the River Challenge","Strategist",7,8,"Decent","Great"
+"David","Cross the River Challenge","Bridge Builder",4,8,"Could be better","Great"
+"David","Build a Raft Challenge","Captain",6,4,"Decent","Poor"
+"Ahmed","Cross the River Challenge","Communicator",2,8,"Poor","Great"
+"Ahmed","Build a Raft Challenge","Safety Officer",5,4,"Alright","Poor"
+"Quinten","Cross the River Challenge","Risk Taker",5,8,"Alright","Great"
+"Elian","Build a Raft Challenge","Engineer",7,4,"Good","Poor"
+"Ralph","Build a Raft Challenge","Builder",3,4,"Poor","Poor"
+
+Summary
+Total Tasks,2
+Total Members,6
+Completed Tasks,2
