@@ -5,6 +5,7 @@ const downloadBtn = document.querySelector(
    ".file-action-card:nth-of-type(2) .action-button"
 );
 const fileInput = document.createElement("input");
+let processedFileName = null;
 
 // Set Flask server URL - adjust this to match your Flask server address
 const FLASK_SERVER_URL = "http://127.0.0.1:5000";
@@ -103,7 +104,7 @@ async function uploadFile(file) {
 
    try {
       // Show loading state
-      selectFileBtn.textContent = "Uploading...";
+      selectFileBtn.innerHTML = '<span>Uploading...</span>';
       selectFileBtn.disabled = true;
 
       // Check if the server is reachable first
@@ -111,7 +112,6 @@ async function uploadFile(file) {
          const pingResponse = await fetch(`${FLASK_SERVER_URL}/ping`, {
             method: "GET",
             mode: "cors",
-            timeout: 2000, // 2 seconds timeout
          });
          console.log("Server ping result:", pingResponse.ok);
       } catch (pingError) {
@@ -125,9 +125,7 @@ async function uploadFile(file) {
       const response = await fetch(`${FLASK_SERVER_URL}/upload`, {
          method: "POST",
          body: formData,
-         // Include this to allow cross-origin requests
          mode: "cors",
-         credentials: "same-origin",
       });
 
       console.log("Response status:", response.status);
@@ -141,6 +139,9 @@ async function uploadFile(file) {
 
       const result = await response.json();
       console.log("File uploaded successfully:", result);
+      
+      // Store the processed file name
+      processedFileName = result.processed_file;
 
       // Reset button state
       selectFileBtn.innerHTML =
@@ -150,9 +151,6 @@ async function uploadFile(file) {
       // Enable download button when file is processed
       if (result.status === "success" && result.processed_file) {
          downloadBtn.disabled = false;
-         downloadBtn.onclick = () => {
-            window.location.href = `${FLASK_SERVER_URL}/download/${result.processed_file}`;
-         };
       }
    } catch (error) {
       console.error("Error uploading file:", error);
@@ -165,10 +163,34 @@ async function uploadFile(file) {
    }
 }
 
-// Debugging logs
-console.log("Upload script loaded");
-console.log("Drop area:", dropArea);
-console.log("Flask server URL:", FLASK_SERVER_URL);
+// Add click handler for download button
+downloadBtn.addEventListener("click", handleDownload);
+
+function handleDownload() {
+   if (processedFileName) {
+      window.location.href = `${FLASK_SERVER_URL}/download/${processedFileName}`;
+   } else {
+      alert("No processed file available for download yet");
+   }
+}
 
 // Initialize download button as disabled
 downloadBtn.disabled = true;
+
+// Add visual feedback for drag and drop
+dropArea.classList.add("file-drop-area");
+
+// Add CSS for highlighting drop area
+const style = document.createElement('style');
+style.textContent = `
+   .file-drop-area {
+      transition: all 0.3s ease;
+   }
+   .highlight {
+      border: 2px dashed #0066cc !important;
+      background-color: rgba(0, 102, 204, 0.1) !important;
+   }
+`;
+document.head.appendChild(style);
+
+console.log("Upload script loaded");

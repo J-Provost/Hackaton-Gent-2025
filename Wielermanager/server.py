@@ -89,7 +89,7 @@ def process_file(filename, file_path):
     In a real implementation, this would convert the audio/text to a CV.
     """
     # Get the file extension
-    file_ext = filename.rsplit('.', 1)[1].lower()
+    file_ext = filename.rsplit('.', 1)[1].lower() if '.' in filename else ''
     
     # Create a processed filename (a PDF in this example)
     processed_filename = f"processed_{filename.rsplit('.', 1)[0]}.pdf"
@@ -97,11 +97,10 @@ def process_file(filename, file_path):
     
     print(f"Processing file: {filename} -> {processed_filename}")
     
-    # Placeholder for processing logic
-    # TODO: Implement your AI processing here
-    # For now, just create an empty PDF file as a placeholder
+    # Placeholder for processing logic based on file type
+    # In a production environment, you would implement actual processing for each file type
     with open(processed_path, 'w') as f:
-        f.write("This is a placeholder for the processed CV")
+        f.write(f"This is a placeholder for the processed CV from {filename}")
     
     return processed_filename
 
