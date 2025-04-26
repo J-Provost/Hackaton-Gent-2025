@@ -10,7 +10,7 @@ def main():
     else:
         od = od_new
 
-    with open("Diploma\Competenties.txt", "w") as file:
+    with open("rapporten\Competenties.txt", "w") as file:
         file.write(od[program_name])
 
     

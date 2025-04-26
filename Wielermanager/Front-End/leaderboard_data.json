@@ -75,5 +75,16 @@
             "lateness": "Ralph"
         },
         "score": 5
+    },
+    "David": {
+        "picks": {
+            "time_value": "David",
+            "coffee": "David",
+            "tires_changed": "David",
+            "returns": "David",
+            "service_score": "Ahmed",
+            "lateness": "Elian"
+        },
+        "score": 0
     }
 }
