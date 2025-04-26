@@ -32,7 +32,7 @@
           <section class="leaderboard-column">
             <div class="leaderboard-wrapper">
               <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ef669fb8937c249ab5508f13f6205b959e75f301?placeholderIfAbsent=true&apiKey=26d0c3e8b0fc4de98d536bc5b0ea7e15" class="leaderboard-icon" alt="Leaderboard" />
-              <div class="leaderboard-list">
+              <div class="leaderboard-list collapsible-list">
                 <div class="list-item">
                   <div class="list-item-overlay"></div>
                   <div class="list-item-content">
@@ -40,9 +40,12 @@
                     <span class="item-score">100+</span>
                   </div>
                 </div>
+
                 <!-- Repeated for all 12 items -->
                 <!-- Note: Implementation includes all 12 items, truncated for brevity -->
               </div>
+              <button class="toggle-button" onclick="toggleList()">Toon meer</button>
+
             </div>
           </section>
       
@@ -160,7 +163,7 @@
       </section>
       
       <section class="cta-section">
-        <h2 class="cta-title">LeaderBoard Gezien?</h2>
+        <h2 class="cta-title">LeaderBoard <br />Gezien?</h2>
         <div class="cta-buttons">
           <button class="cta-button">Bekijken</button>
         </div>
@@ -183,6 +186,15 @@
           <p class="copyright">copyright @<br />2025</p>
         </div>
       </footer>
+
+      <script>
+        function toggleList() {
+          const list = document.querySelector('.collapsible-list');
+          const button = document.querySelector('.toggle-button');
+          list.classList.toggle('expanded');
+          button.textContent = list.classList.contains('expanded') ? 'Toon minder' : 'Toon meer';
+        }
+      </script>
       
 </body>
 </html>
