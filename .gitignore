@@ -1,2 +1,9 @@
 # Verbergt API keys
+<<<<<<< HEAD
 API.json
+=======
+API.json
+__pycache__
+rapporten/*
+!rapporten/rapportSplitter
+>>>>>>> 6294c4bdedf05b9c9071a3578a3d4cdc9027174c

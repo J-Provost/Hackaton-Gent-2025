@@ -1,0 +1,52 @@
+{
+    "Ralph": {
+        "picks": {
+            "time_value": "Sven",
+            "coffee": "Lisa",
+            "tires_changed": "Lisa",
+            "returns": "Lisa",
+            "service_score": "Sven",
+            "lateness": "Sven"
+        }
+    },
+    "Jelle": {
+        "picks": {
+            "time_value": "Ralph",
+            "coffee": "Sven",
+            "tires_changed": "Sven",
+            "returns": "Lisa",
+            "service_score": "Lisa",
+            "lateness": "Kenny"
+        }
+    },
+    "Ahmed": {
+        "picks": {
+            "time_value": "Sven",
+            "coffee": "Kenny",
+            "tires_changed": "Fatima",
+            "returns": "Fatima",
+            "service_score": "Sven",
+            "lateness": "Lisa"
+        }
+    },
+    "Elian": {
+        "picks": {
+            "time_value": "Sven",
+            "coffee": "Sven",
+            "tires_changed": "Lisa",
+            "returns": "Lisa",
+            "service_score": "Kenny",
+            "lateness": "Kenny"
+        }
+    },
+    "Test": {
+        "picks": {
+            "time_value": "Sven",
+            "coffee": "Sven",
+            "tires_changed": "Lisa",
+            "returns": "Lisa",
+            "service_score": "Lisa",
+            "lateness": "Lisa"
+        }
+    }
+}

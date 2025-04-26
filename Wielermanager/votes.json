@@ -1,0 +1,31 @@
+{
+    "time_value": {
+        "Ralph": 3,
+        "Sven": 5
+    },
+    "coffee": {
+        "Sven": 5,
+        "Lisa": 2,
+        "Kenny": 1
+    },
+    "tires_changed": {
+        "Lisa": 5,
+        "Sven": 2,
+        "Fatima": 1
+    },
+    "returns": {
+        "Lisa": 5,
+        "Sven": 2,
+        "Fatima": 1
+    },
+    "service_score": {
+        "Lisa": 4,
+        "Sven": 3,
+        "Kenny": 1
+    },
+    "lateness": {
+        "Lisa": 5,
+        "Sven": 1,
+        "Kenny": 2
+    }
+}
