@@ -201,11 +201,43 @@ body {
   width: 100%;
 }
 
+
 .list-item {
   position: relative;
   min-height: 56px;
   width: 100%;
   margin-bottom: 4px;
+}
+
+.collapsible-list {
+  max-height: 300px;
+  /* hoogte voor ~4 items, pas aan naar wens */
+}
+
+.collapsible-list.expanded {
+  max-height: 2000px;
+  /* groot genoeg voor alle items */
+}
+
+.collapsible-list {
+  max-height: 300px;
+  /* hoogte voor ~4 items, pas aan naar wens */
+}
+
+.collapsible-list.expanded {
+  max-height: 2000px;
+  /* groot genoeg voor alle items */
+}
+
+.toggle-button {
+  display: block;
+  margin-top: 10px;
+  background-color: #8355ff;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .list-item-overlay {

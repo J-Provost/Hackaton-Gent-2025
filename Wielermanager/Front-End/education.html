@@ -47,7 +47,7 @@
           te ontdekken.
         </p>
 
-        <div class="file-actions">
+        <!-- <div class="file-actions">
           <div class="file-action-card">
             <div class="icon-wrapper">
               <svg
@@ -73,76 +73,68 @@
                   </clipPath>
                 </defs>
               </svg>
+            </div> -->
+            <div class="job-search-container">
+                  <div class="input-group">
+                    <h2>Zoek een job</h2>
+                    <input type="text" id="jobSearchInput" placeholder="Typ een job..." />
+                    <ul id="jobList">
+                        <!-- Jobs komen hier via JavaScript -->
+                      </ul>
+                </div>
+              </div>
+                <div class="job-search-container">
+                  <div class="input-group">
+                    <h2>Geef een jaar in</h2>
+                    <input type="number" id="yearInput" placeholder="Typ een jaar..." min="1900" max="2100" />
+                  </div>
+                </div>
+        <form id="zoekForm">
+            <div class="file-action-card">
+                <div class="icon-wrapper">
+                <svg
+                    class="download-icon"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                    d="M18.3333 10H13.3333L11.6666 12.5H8.33329L6.66663 10H1.66663M18.3333 10V15C18.3333 15.442 18.1577 15.8659 17.8451 16.1785C17.5326 16.4911 17.1087 16.6667 16.6666 16.6667H3.33329C2.89127 16.6667 2.46734 16.4911 2.15478 16.1785C1.84222 15.8659 1.66663 15.442 1.66663 15V10M18.3333 10L15.4583 4.25833C15.3203 3.98065 15.1076 3.74697 14.8441 3.58357C14.5806 3.42016 14.2767 3.3335 13.9666 3.33333H6.03329C5.72322 3.3335 5.41935 3.42016 5.15583 3.58357C4.89231 3.74697 4.67961 3.98065 4.54163 4.25833L1.66663 10"
+                    stroke="#1E1E1E"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ></path>
+                </svg>
+                </div>
+                <div class="file-info">
+                <h3 class="file-action-title">Submit and Download file.</h3>
+                <p class="file-format">.pdf</p>
+                </div>
+                <button type="submit" class="action-button">
+                <svg
+                    class="button-icon"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                    d="M14 10V12.6667C14 13.0203 13.8595 13.3594 13.6095 13.6095C13.3594 13.8595 13.0203 14 12.6667 14H3.33333C2.97971 14 2.64057 13.8595 2.39052 13.6095C2.14048 13.3594 2 13.0203 2 12.6667V10M4.66667 6.66667L8 10M8 10L11.3333 6.66667M8 10V2"
+                    stroke="#F5F5F5"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ></path>
+                </svg>
+                <span>Submit and Download</span>
+                </button>
             </div>
-            <div class="file-info">
-              <h3 class="file-action-title">Drop your file here.</h3>
-              <p class="file-format">.pdf</p>
             </div>
-            <button class="action-button">
-              <svg
-                class="button-icon"
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M14 10V12.6667C14 13.0203 13.8595 13.3594 13.6095 13.6095C13.3594 13.8595 13.0203 14 12.6667 14H3.33333C2.97971 14 2.64057 13.8595 2.39052 13.6095C2.14048 13.3594 2 13.0203 2 12.6667V10M11.3333 5.33333L8 2M8 2L4.66667 5.33333M8 2V10"
-                  stroke="#F5F5F5"
-                  stroke-width="1.6"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-              </svg>
-              <span>Select File</span>
-            </button>
-          </div>
-
-          <div class="file-action-card">
-            <div class="icon-wrapper">
-              <svg
-                class="download-icon"
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M18.3333 10H13.3333L11.6666 12.5H8.33329L6.66663 10H1.66663M18.3333 10V15C18.3333 15.442 18.1577 15.8659 17.8451 16.1785C17.5326 16.4911 17.1087 16.6667 16.6666 16.6667H3.33329C2.89127 16.6667 2.46734 16.4911 2.15478 16.1785C1.84222 15.8659 1.66663 15.442 1.66663 15V10M18.3333 10L15.4583 4.25833C15.3203 3.98065 15.1076 3.74697 14.8441 3.58357C14.5806 3.42016 14.2767 3.3335 13.9666 3.33333H6.03329C5.72322 3.3335 5.41935 3.42016 5.15583 3.58357C4.89231 3.74697 4.67961 3.98065 4.54163 4.25833L1.66663 10"
-                  stroke="#1E1E1E"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-              </svg>
-            </div>
-            <div class="file-info">
-              <h3 class="file-action-title">Download file.</h3>
-              <p class="file-format">.pdf</p>
-            </div>
-            <button class="action-button">
-              <svg
-                class="button-icon"
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M14 10V12.6667C14 13.0203 13.8595 13.3594 13.6095 13.6095C13.3594 13.8595 13.0203 14 12.6667 14H3.33333C2.97971 14 2.64057 13.8595 2.39052 13.6095C2.14048 13.3594 2 13.0203 2 12.6667V10M4.66667 6.66667L8 10M8 10L11.3333 6.66667M8 10V2"
-                  stroke="#F5F5F5"
-                  stroke-width="1.6"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-              </svg>
-              <span>Download</span>
-            </button>
-          </div>
-        </div>
+        </form>
 
         <section class="important-notice">
           <h2 class="notice-title">Belangrijk bij uploaden:</h2>
@@ -188,5 +180,72 @@
         <p class="copyright">copyright @ 2025</p>
       </footer>
     </div>
+
+    <script>
+        const jobs = [
+          "Applicatie- en databeheer", "Context 4 Omgeving en duurzame ontwikkeling", "Gezondheidszorg",
+          "Optiektechnieken", "Binnenvaarttechnieken", "Defensie en veiligheid", "Muziek", "Opvoeding en begeleiding",
+          "Sportwetenschappen", "Wetenschappen-Wiskunde", "Grieks-Wiskunde", "Ballet", "Project Algemene Vakken",
+          "Natuurwetenschappen", "Horeca", "Freinetpedagogie", "Architectuur en interieur",
+          "Biotechnologische en chemische technieken", "Informatica- en communicatiewetenschappen",
+          "Taal en communicatie", "Lichamelijke Opvoeding", "Grieks/Latijn", "Moderne Vreemde Talen Frans - Engels",
+          "Bakkerijtechnieken", "Rudolf Steinerpedagogie", "Beeldende vorming", "Dans", "Sport",
+          "Economie-Wiskunde", "Dentaaltechnieken", "Maritieme technieken motoren", "Latijn-Moderne talen",
+          "Textielontwerp en prototyping", "Bouw- en houtwetenschappen", "Yeshiva", "Crossmedia",
+          "Slagerij-Traiteurtechnieken", "Topsport (dubbele finaliteit)", "Beeldende kunst", "Autotechnieken",
+          "Taal en communicatiewetenschappen", "Technologische wetenschappen en engineering",
+          "Textielproductietechnieken", "Wellness en schoonheid", "Welzijnswetenschappen",
+          "Bedrijfsondersteunende Informaticawetenschappen", "Moderne Vreemde Talen Duits",
+          "Agrotechnieken dier", "Internationale handel en logistiek",
+          "Biotechnologische en chemische wetenschappen", "Mechanische vormgevingstechnieken",
+          "Industriële ICT", "Context 2 Mentale gezondheid", "Context 5 Politiek-juridische samenleving",
+          "Elektromechanische technieken", "Elektronicatechnieken", "Woordkunst-drama", "Podiumtechnieken",
+          "Fotografie", "Commerciële organisatie", "Leren Leren", "Aardrijkskunde", "Technisch-Technologische Vorming",
+          "Mechatronica", "Humane Wetenschappen", "Humane wetenschappen", "Geschiedenis", "Grafimedia",
+          "Dierenverzorgingstechnieken", "Moderne talen-Wetenschappen", "Context 7 Socio culturele samenleving",
+          "Moderne talen (derde graad)", "Sportbegeleiding", "Tuinaanleg en beheer", "Topsport-Wetenschappen",
+          "Moderne Talen", "Economie", "Koel- en warmtetechnieken", "Bedrijfswetenschappen",
+          "Architecturale vorming", "Topsport-Bedrijfswetenschappen", "Wiskunde", "Elektrotechnieken",
+          "Natuur- en groentechnieken", "Toerisme", "Maritieme technieken dek", "Grieks-Latijn",
+          "Orthopedietechnieken", "Audiovisuele vorming", "Stam", "Topsport", "Mode",
+          "Context 3 Sociorelationele ontwikkeling", "Latijn-Wiskunde", "Context 1 Lichamelijke gezondheid en veiligheid",
+          "Nederlands", "Bedrijfsorganisatie", "Agrotechnieken plant", "Wetenschappen",
+          "Economie-Moderne talen", "Bouwtechnieken", "Latijn-Wetenschappen",
+          "Biotechnologische en chemische STEM-wetenschappen", "Topsport-Economie",
+          "Context 6 Socio-economische samenleving", "Moderne vreemde talen Frans of Engels", "Houttechnieken",
+          "Vliegtuigtechnieken"
+        ];
+      
+        const jobListEl = document.getElementById("jobList");
+        const inputEl = document.getElementById("jobSearchInput");
+        const yearInputEl = document.getElementById("yearInput");
+
+      
+        function displayJobs(filter = "") {
+          const filtered = jobs
+            .filter(job => job.toLowerCase().includes(filter.toLowerCase()))
+            .sort();
+      
+          jobListEl.innerHTML = filtered.map(job => `<li>${job}</li>`).join("");
+        }
+      
+        inputEl.addEventListener("input", () => {
+          displayJobs(inputEl.value);
+        });
+
+        yearInputEl.addEventListener("input", () => {
+            console.log("Ingegeven jaar:", yearInputEl.value);
+            // Hier kan je later nog iets doen met de jaarinput, zoals filteren per jaartal
+        });
+      
+        // Initieel weergeven
+        displayJobs();
+
+        document.getElementById('zoekForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Zorgt ervoor dat de pagina niet herlaadt
+            alert('Formulier is verzonden!');
+        });
+      </script>
+      
   </body>
 </html>
