@@ -196,5 +196,10 @@ def serve_css(filename):
     css_folder = os.path.join(basedir, 'Front-End')
     return send_from_directory(css_folder, filename)
 
+@app.route('/ping', methods=['GET', 'OPTIONS'])
+def ping():
+    """Simple endpoint to check if the server is up and running"""
+    return jsonify({'status': 'ok', 'message': 'Server is running'}), 200
+
 if __name__ == "__main__":
     app.run(debug=True)
