@@ -7,7 +7,7 @@ job_data = {
         'service_score': 92,
         'lateness': 3
     },
-    "Sven": {
+    "Quinten": {
         'time_value': 85,
         'coffee': 10,
         'tires_changed': 40,
@@ -15,7 +15,7 @@ job_data = {
         'service_score': 88,
         'lateness': 5
     },
-    "Lisa": {
+    "Ahmed": {
         'time_value': 95,
         'coffee': 7,
         'tires_changed': 30,
@@ -23,7 +23,7 @@ job_data = {
         'service_score': 94,
         'lateness': 1
     },
-    "Kenny": {
+    "Elian": {
         'time_value': 80,
         'coffee': 18,
         'tires_changed': 25,
@@ -31,12 +31,20 @@ job_data = {
         'service_score': 85,
         'lateness': 6
     },
-    "Fatima": {
+    "David": {
         'time_value': 88,
         'coffee': 12,
         'tires_changed': 20,
         'returns': 1,
         'service_score': 90,
         'lateness': 2
+    },
+    "Jelle": {
+        'time_value': 70,
+        'coffee': 12,
+        'tires_changed': 20,
+        'returns': 1,
+        'service_score': 90,
+        'lateness': 0
     }
 }

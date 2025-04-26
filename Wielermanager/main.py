@@ -39,8 +39,8 @@ for emp in employees:
 # 2. Laad bestaande fantasy teams
 leaderboard = Leaderboard()
 
-if os.path.exists("Wielermanager/leaderboard_data.json"):
-    with open("Wielermanager/leaderboard_data.json", "r", encoding="utf-8") as f:
+if os.path.exists("Front-end/leaderboard_data.json"):
+    with open("Front-end/leaderboard_data.json", "r", encoding="utf-8") as f:
         teams_data = json.load(f)
     for player_name, data in teams_data.items():
         old_team = FantasyTeam(player_name)
@@ -68,12 +68,17 @@ for e in employees:
 
 # 5. Bewaar alle fantasy teams
 export_data = {
-    name: {"picks": team.picks}
+    name: {
+        "picks": team.picks,
+        "score": team.score  # ✅ voeg ook de score toe!
+    }
     for name, team in leaderboard.teams.items()
 }
 
-with open("Wielermanager/leaderboard_data.json", "w", encoding="utf-8") as f:
+
+with open("Front-end/leaderboard_data.json", "w", encoding="utf-8") as f:
     json.dump(export_data, f, indent=4)
+
 
 # 6. Update HTML automatisch
 def update_html(employees, leaderboard, fantasy_team):
@@ -104,7 +109,7 @@ def update_html(employees, leaderboard, fantasy_team):
     html_filled = html_filled.replace("<!-- Dynamisch fantasy team data -->", fantasy_rows)
     html_filled = html_filled.replace("<!-- Dynamisch werknemersdata -->", employee_rows)
 
-    with open("fantasy_manager_dashboard.html", "w", encoding="utf-8") as f:
+    with open("Wielermanager/fantasy_manager_dashboard.html", "w", encoding="utf-8") as f:
         f.write(html_filled)
 
     print("✅ HTML dashboard geüpdatet als fantasy_manager_dashboard.html!")
