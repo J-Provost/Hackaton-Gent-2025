@@ -23,14 +23,14 @@
     },
     "Ahmed": {
         "picks": {
-            "time_value": "Sven",
-            "coffee": "Kenny",
-            "tires_changed": "Fatima",
-            "returns": "Fatima",
-            "service_score": "Sven",
-            "lateness": "Lisa"
+            "time_value": "Ralph",
+            "coffee": "Ralph",
+            "tires_changed": "Ralph",
+            "returns": "Ralph",
+            "service_score": "Ralph",
+            "lateness": "Ralph"
         },
-        "score": 0
+        "score": 5
     },
     "Elian": {
         "picks": {
@@ -80,10 +80,10 @@
         "picks": {
             "time_value": "David",
             "coffee": "David",
-            "tires_changed": "David",
-            "returns": "David",
-            "service_score": "Ahmed",
-            "lateness": "Elian"
+            "tires_changed": "Quinten",
+            "returns": "Elian",
+            "service_score": "Elian",
+            "lateness": "Jelle"
         },
         "score": 0
     }

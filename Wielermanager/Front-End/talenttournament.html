@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style_talent.css">
-    <script src="leaderboard.js"></script>
+    <script src="leaderboard.js" defer></script>
 </head>
 <body>
     <nav class="navigation">
@@ -16,7 +16,7 @@
         <div class="nav-items">
             <ul class="nav-list">
             <li class="nav-item">
-              <a href="talenttournament.html" class="nav-link">Talenttournament</a>
+              <a href="buildingguide.html" class="nav-link">Buildingguide</a>
             </li>
             <li class="nav-item">
               <a href="education.html" class="nav-link">Educationguide</a>
@@ -41,33 +41,24 @@
       
       <main class="main-content">
         <div class="content-grid">
+      
+          <!-- Linkerkolom: Leaderboard -->
           <section class="leaderboard-column">
             <div class="leaderboard-wrapper">
               <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/ef669fb8937c249ab5508f13f6205b959e75f301?placeholderIfAbsent=true&apiKey=26d0c3e8b0fc4de98d536bc5b0ea7e15" class="leaderboard-icon" alt="Leaderboard" />
-
-              <div class="leaderboard-list collapsible-list">
-                <div class="list-item">
-                  <div class="list-item-overlay"></div>
-                  <div class="list-item-content">
-                    <span class="item-text">List item</span>
-                    <span class="item-score">100+</span>
+                <div class="leaderboard-list collapsible-list">
+                  <div class="collapsible-list" id="leaderboard-list">
+                    <!-- Hier vullen we de namen + scores dynamisch in -->
                   </div>
+                  
+                                
+                  <button class="toggle-button" onclick="toggleList()">Toon meer</button>
                 </div>
-
-                <div class="leaderboard-list" id="leaderboard-list">
-                <!-- Repeated for all 12 items -->
-                <div class="leaderboard-list" id="leaderboard-list">
-                <!-- Note: Implementation includes all 12 items, truncated for brevity -->
-              </div>
-              <button class="toggle-button" onclick="toggleList()">Toon meer</button>
-
             </div>
             <button class="toggle-button" onclick="toggleList()">Toon meer</button>
           </section>
-        </div>
-      </main>
       
-      
+          <!-- Middenkolom: Formulier -->
           <section class="form-column">
             <div class="form-content">
               <div class="input-field">
@@ -78,7 +69,6 @@
                   placeholder="Naam Toevoegen!"
                 />
               </div>
-      
               <div class="textarea-group">
                 <label class="textarea-label">Meest Waard</label>
                 <textarea id="time_value" class="textarea-input" placeholder="Welke werknemer heeft de duurste reparaties gemaakt in de kortste tijd?"></textarea>
@@ -108,11 +98,12 @@
                 <label class="textarea-label">Meest Telaat op werk</label>
                 <textarea id="lateness" class="textarea-input" placeholder="Wie kwam het vaakst te laat?"></textarea>
               </div>
-              
+            </div>
           </section>
       
+          <!-- Rechterkolom: Namenlijst -->
           <section class="users-column">
-            <div class="users-list">
+            <div id="users-list">
               <div class="user-item">
                 <div class="user-item-overlay"></div>
                 <div class="user-item-content">
@@ -124,57 +115,65 @@
                     <h3 class="user-name">List item</h3>
                   </div>
                 </div>
-                <div class="users-list" id="users-list">
-                  <!-- Automatisch gevuld -->
-                </div>
-                
+              </div>
+              <!-- meer users indien nodig -->
+            </div>
           </section>
+      
         </div>
       </main>
+      
+      
+          
+    
       <div class="center-wrapper">
         <button onclick="handleSubmit()" class="submit-button">Indienen</button>
       </div>     
+
       <section class="cards-section">
         <div class="cards-header">
           <h2 class="cards-title"><span class="highlight">Top</span> Vorige Maand</h2>
           <p class="cards-subtitle">Beste Score</p>
         </div>
-      
+        
+        <div class="bouncing-balls-background">
+          <div class="ball ball1"></div>
+          <div class="ball ball2"></div>
+          <div class="ball ball3"></div>
+        </div>
+        
         <div class="cards-grid">
           <article class="card">
-            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/1fb52d50b006a1806acada6447faea3208772c0d?placeholderIfAbsent=true&apiKey=26d0c3e8b0fc4de98d536bc5b0ea7e15" class="card-image" alt="Card image" />
+            <img src="Pictures/Ahmed.jpg" class="card-image" alt="Card image" />
             <div class="card-body">
               <div class="card-content">
-                <h3 class="card-title">Title</h3>
+                <h3 class="card-title">Employee of the month</h3>
                 <p class="card-text">
-                  Body text for whatever you'd like to say. Add main takeaway points,
-                  quotes, anecdotes, or even a very very short story.
+                  Ahmed stood out last month based on his high performance and great service.
                 </p>
               </div>
             </div>
           </article>
       
           <article class="card">
-            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/1fb52d50b006a1806acada6447faea3208772c0d?placeholderIfAbsent=true&apiKey=26d0c3e8b0fc4de98d536bc5b0ea7e15" class="card-image" alt="Card image" />
+            <img src="Pictures/Quinten.jpg" class="card-image" alt="Card image" />
             <div class="card-body">
               <div class="card-content">
-                <h3 class="card-title">Title</h3>
+                <h3 class="card-title">Slacker</h3>
                 <p class="card-text">
-                  Body text for whatever you'd like to say. Add main takeaway points,
-                  quotes, anecdotes, or even a very very short story.
+                  He tried.
                 </p>
               </div>
             </div>
           </article>
       
           <article class="card">
-            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/1fb52d50b006a1806acada6447faea3208772c0d?placeholderIfAbsent=true&apiKey=26d0c3e8b0fc4de98d536bc5b0ea7e15" class="card-image" alt="Card image" />
+            <img src="Pictures/Elian.jpg" class="card-image" alt="Card image" />
             <div class="card-body">
               <div class="card-content">
-                <h3 class="card-title">Title</h3>
+                <h3 class="card-title">Not early bird</h3>
                 <p class="card-text">
-                  Body text for whatever you'd like to say. Add main takeaway points,
-                  quotes, anecdotes, or even a very very short story.
+                  Elian missed 25% of the project because he wanted to see a gay man sing.
                 </p>
               </div>
             </div>
@@ -189,21 +188,45 @@
         </div>
       </section>
       
-      <footer class="footer">
-        <div class="footer-divider"></div>
-        <div class="footer-content">
+      <footer class="main-footer">
+        <div class="footer-container">
           <div class="footer-left">
-            <div class="footer-logo-wrapper">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e2233b7e9cf0ffa95d808fcc5115d3030124f95a?placeholderIfAbsent=true&apiKey=26d0c3e8b0fc4de98d536bc5b0ea7e15" class="footer-logo" alt="Footer logo" />
-              <div class="social-icons"></div>
+            <div class="footer-logo">
+              <img
+                src="Talentguide_primair-logo-5.png"
+                alt="Talentguide Logo"
+                class="footer-logo-image"
+              />
             </div>
-            <nav class="footer-nav">
-              <a href="#" class="footer-link">Page</a>
-              <a href="#" class="footer-link">Page</a>
-              <a href="#" class="footer-link">Page</a>
-            </nav>
+            <div class="social-links">
+              <a href="#" class="social-icon" aria-label="LinkedIn">
+                <img src="icons8-linkedin-50.png" alt="LinkedIn" class="social-img" />
+              </a>
+              <a href="#" class="social-icon" aria-label="Instagram">
+                <img src="icons8-instagram-50.png" alt="Instagram" class="social-img" />
+              </a>
+            </div>
           </div>
-          <p class="copyright">copyright @<br />2025</p>
+  
+          <nav class="footer-navigation" aria-label="Footer Navigation">
+            <ul class="footer-nav-list">
+              <li>
+                <a href="evaluation.html" class="footer-nav-link"
+                  >Evaluationguide</a
+                >
+              </li>
+              <li>
+                <a href="education.html" class="footer-nav-link"
+                  >Educationguide</a
+                >
+              </li>
+              <li>
+                <a href="buildingguide.html" class="footer-nav-link">Buildingguide</a>
+              </li>
+            </ul>
+          </nav>
+  
+          <div class="footer-right">copyright @<br />2025</div>
         </div>
       </footer>
       <script>

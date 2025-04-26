@@ -1,39 +1,42 @@
 async function loadLeaderboard() {
-    try {
-      const response = await fetch('./leaderboard_data.json');
-      const data = await response.json();
-  
-      const list = document.getElementById('leaderboard-list');
-      list.innerHTML = ''; // Clear oude inhoud
-  
-      // Sorteer spelers op score
-      const sorted = Object.entries(data).map(([name, info]) => ({
+  try {
+    const response = await fetch('./leaderboard_data.json');
+    const data = await response.json();
+
+    const list = document.getElementById('leaderboard-list');
+    list.innerHTML = ''; // Oude lijst leegmaken
+
+    // Sorteer spelers op score
+    console.log("Passed first test")
+    const sorted = Object.entries(data)
+      .map(([name, info]) => ({
         name: name,
         score: info.score || 0
-      })).sort((a, b) => b.score - a.score);
-  
-      sorted.forEach(player => {
-        const item = document.createElement('div');
-        item.className = 'list-item';
-        item.innerHTML = `
-          <div class="list-item-overlay"></div>
-          <div class="list-item-content">
-            <span class="item-text">${player.name}</span>
-            <span class="item-score">${player.score}</span>
-          </div>
-        `;
-        list.appendChild(item);
-      });
-    } catch (error) {
-      console.error('Fout bij laden leaderboard:', error);
-    }
-  }
-  
-  loadLeaderboard();
-  
-  let playerName = ""; // Globale variabele
+      }))
+      .sort((a, b) => b.score - a.score);
 
-  function submitName() {
+    sorted.forEach(player => {
+      const item = document.createElement('div');
+      item.className = 'list-item';
+      item.innerHTML = `
+        <div class="list-item-content">
+          <span class="item-text">${player.name}</span>
+          <span class="item-score">${player.score}</span>
+        </div>
+      `;
+      list.appendChild(item);
+      console.log("Passed second test")
+    });
+  } catch (error) {
+    console.error('❌ Fout bij laden leaderboard:', error);
+    console.log("Passed second log")
+  }
+}
+
+  
+let playerName = ""; // Globale variabele
+
+function submitName() {
     const nameInput = document.getElementById('player-name'); // nu correcte id
     playerName = nameInput.value.trim();
   
@@ -46,7 +49,7 @@ async function loadLeaderboard() {
   }
   
 
-  async function handleSubmit() {
+async function handleSubmit() {
     submitName(); // Welkom berichtje
 
     await submitFantasyTeam(); // Wacht totdat team is ingezonden
@@ -128,7 +131,6 @@ async function loadUsers() {
     }
   }
   
-  // Start het laden van de werknemers
-  loadUsers();
-  
-  
+// Start het laden van de werknemers
+loadUsers();
+loadLeaderboard();  
