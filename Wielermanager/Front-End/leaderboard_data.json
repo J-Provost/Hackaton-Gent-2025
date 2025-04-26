@@ -8,7 +8,7 @@
             "service_score": "Sven",
             "lateness": "Sven"
         },
-        "score": 1
+        "score": 0
     },
     "Jelle": {
         "picks": {
@@ -19,7 +19,7 @@
             "service_score": "Lisa",
             "lateness": "Kenny"
         },
-        "score": 4
+        "score": 1
     },
     "Ahmed": {
         "picks": {
@@ -30,7 +30,7 @@
             "service_score": "Sven",
             "lateness": "Lisa"
         },
-        "score": 1
+        "score": 0
     },
     "Elian": {
         "picks": {
@@ -41,7 +41,7 @@
             "service_score": "Kenny",
             "lateness": "Kenny"
         },
-        "score": 2
+        "score": 0
     },
     "Test": {
         "picks": {
@@ -52,7 +52,7 @@
             "service_score": "Lisa",
             "lateness": "Lisa"
         },
-        "score": 3
+        "score": 0
     },
     "UKGVUV": {
         "picks": {
@@ -63,6 +63,17 @@
             "service_score": "Sven",
             "lateness": "Sven"
         },
-        "score": 2
+        "score": 0
+    },
+    "khgtfkytf": {
+        "picks": {
+            "time_value": "Ralph",
+            "coffee": "Ralph",
+            "tires_changed": "Ralph",
+            "returns": "Ralph",
+            "service_score": "Ralph",
+            "lateness": "Ralph"
+        },
+        "score": 5
     }
 }
