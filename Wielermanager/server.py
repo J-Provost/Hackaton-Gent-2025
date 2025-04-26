@@ -1,4 +1,3 @@
-from flask import Flask, request, jsonify, send_from_directory
 from employee import Employee
 from wieler_manager import FantasyTeam
 from leaderboard import Leaderboard
@@ -6,11 +5,18 @@ from job_data import job_data
 import json
 import os
 from flask_cors import CORS
+from flask import Flask, request, jsonify, send_from_directory, render_template
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="Wielermanager/Front-End", static_url_path='/static')
+
 CORS(app)
 
 basedir = os.path.abspath(os.path.dirname(__file__))
+
+@app.route('/')
+def index():
+    return send_from_directory(os.path.join(basedir, 'Front-End'), 'talenttournament.html')
+
 
 # Werknemers lijst
 employees = [Employee(name) for name in ["Ralph", "Sven", "Lisa", "Kenny", "Fatima"]]
@@ -28,8 +34,8 @@ else:
 
 # Leaderboard bestand
 leaderboard = Leaderboard()
-if os.path.exists("Wielermanager/Front-end/leaderboard_data.json"):
-    with open("Wielermanager/Front-end/leaderboard_data.json", "r", encoding="utf-8") as f:
+if os.path.exists("Wielermanager/Front-End/leaderboard_data.json"):
+    with open("Wielermanager/Front-End/leaderboard_data.json", "r", encoding="utf-8") as f:
         teams_data = json.load(f)
     for player_name, data in teams_data.items():
         old_team = FantasyTeam(player_name)
@@ -52,7 +58,7 @@ def submit_team():
 
     # Save leaderboard
     export_data = {name: {"picks": team.picks, "score": team.score} for name, team in leaderboard.teams.items()}
-    with open("Wielermanager/Front-end/leaderboard_data.json", "w", encoding="utf-8") as f:
+    with open("Wielermanager/Front-End/leaderboard_data.json", "w", encoding="utf-8") as f:
         json.dump(export_data, f, indent=4)
 
     # Update votes
@@ -77,7 +83,7 @@ photos_urls = {
 
 @app.route('/pictures/<path:filename>')
 def serve_picture(filename):
-    pictures_folder = os.path.join(basedir, 'Front-end', 'Pictures')
+    pictures_folder = os.path.join(basedir, 'Front-End', 'Pictures')
     return send_from_directory(pictures_folder, filename)
 
 @app.route('/employees', methods=['GET'])
