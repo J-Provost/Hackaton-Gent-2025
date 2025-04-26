@@ -6,12 +6,12 @@ import markdown2
 
 
 # Read the Markdown file
-def toPDF():
-    with open("Hackaton-Gent-2025/SpeechToCV/result.md", "r", encoding="utf-8") as md_file:
-        markdown_content = md_file.read()
+def toPDF(markdown_file):
+    # with open("Hackaton-Gent-2025/SpeechToCV/result.md", "r", encoding="utf-8") as md_file:
+    #     markdown_content = md_file.read()
 
     # Convert Markdown to plain text (strip HTML tags)
-    plain_text = markdown2.markdown(markdown_content, extras=["strip"])
+    plain_text = markdown2.markdown(markdown_file, extras=["strip"])
 
     # Create a PDF
     pdf = FPDF()

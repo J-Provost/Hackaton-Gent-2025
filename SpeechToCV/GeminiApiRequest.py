@@ -33,8 +33,9 @@ def GeminiApiRequestAudio(audio_file_path):
         model="gemini-2.0-flash", contents=["In this audio file you hear a employee (a blue colar worker) talking with their supervisor. Summarize what you hear in this interview report into a CV for the employee.", myfile]
     )
 
-    print(response.text)
-    with open("Hackaton-Gent-2025/SpeechToCV/result.md", "w") as file:
-        file.write(response.text[12:-6])
+    return response.text[12:-6]
+    # print(response.text)
+    # with open("Hackaton-Gent-2025/SpeechToCV/result.md", "w") as file:
+    #     file.write(response.text[12:-6])
 
 GeminiApiRequestAudio("Hackaton-Gent-2025/SpeechToCV/Silence Wench.mp3")
