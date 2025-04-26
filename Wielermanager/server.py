@@ -10,6 +10,8 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
+basedir = os.path.abspath(os.path.dirname(__file__))
+
 # Werknemers lijst
 employees = [Employee(name) for name in ["Ralph", "Sven", "Lisa", "Kenny", "Fatima"]]
 for emp in employees:
@@ -75,7 +77,8 @@ photos_urls = {
 
 @app.route('/pictures/<path:filename>')
 def serve_picture(filename):
-    return send_from_directory('Front-end/Pictures', filename)
+    pictures_folder = os.path.join(basedir, 'Front-end', 'Pictures')
+    return send_from_directory(pictures_folder, filename)
 
 @app.route('/employees', methods=['GET'])
 def get_employees():
