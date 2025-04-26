@@ -1,0 +1,90 @@
+import re
+import json
+import os
+
+def parse_employee_data(file_path: str) -> dict:
+    """Parse the employee trust report and extract data for each employee."""
+    
+    with open(file_path, 'r', encoding='utf-8') as file:
+        content = file.read()
+    
+    # Split content starting with "👤 "
+    employee_sections = re.split(r'(?=👤 )', content)
+    
+    # Skip the header section
+    employee_sections = [section for section in employee_sections if '👤 ' in section]
+    
+    employees_data = []
+    
+    for section in employee_sections:
+        # Extract employee name
+        name_match = re.search(r'👤 (.+)', section)
+        if not name_match:
+            continue
+        name = name_match.group(1).strip()
+        
+        # Extract vote counts
+        positive_votes = int(re.search(r'Positieve stemmen: (\d+)', section).group(1))
+        negative_votes = int(re.search(r'Negatieve stemmen: (\d+)', section).group(1))
+        trust_score = int(re.search(r'Vertrouwensscore: (-?\d+)', section).group(1))
+        
+        # Extract votes per category
+        category_section = re.search(r'Stemmen per categorie:(.*?)(?=👤|\Z)', section, re.DOTALL)
+        
+        categories = {}
+        if category_section:
+            category_text = category_section.group(1)
+            category_matches = re.findall(r'-\s*([^:]+):\s*(\d+)', category_text)
+            
+            for category, votes in category_matches:
+                categories[category.strip()] = int(votes)
+        
+        # Create employee data dictionary
+        employee_data = {
+            "name": name,
+            "positive_votes": positive_votes,
+            "negative_votes": negative_votes,
+            "trust_score": trust_score,
+            "categories": categories
+        }
+        
+        employees_data.append(employee_data)
+    
+    return employees_data
+
+def save_employee_data(employees_data, output_dir="Hackaton-Gent-2025/rapporten/employee_data"):
+    """Slaat elke medewerker zijn data als JSON file."""
+    
+    # Maakt directory als die nog niet bestaat
+    os.makedirs(output_dir, exist_ok=True)
+    
+    for employee in employees_data:
+        name = employee["name"]
+        file_name = f"{name.lower().replace(' ', '_')}.json"
+        file_path = os.path.join(output_dir, file_name)
+        
+        with open(file_path, 'w', encoding='utf-8') as file:
+            json.dump(employee, file, indent=2, ensure_ascii=False)
+        
+        print(f"Saved data for {name} to {file_path}")
+
+def main():
+    # Path to the input file
+    input_file = "Hackaton-Gent-2025/rapporten/vertrouwensrapport.txt"
+    
+    # Parse the employee data
+    employees_data = parse_employee_data(input_file)
+    
+    # Save each employee's data to a separate file
+    save_employee_data(employees_data)
+    
+    # Print summary
+    print(f"\nProcessed data for {len(employees_data)} employees.")
+    
+    # Also save all data to a single file
+    with open("Hackaton-Gent-2025/rapporten/all_employees.json", 'w') as file:
+        json.dump(employees_data, file, indent=2)
+    
+    print("Also saved all data to all_employees.json")
+
+main()

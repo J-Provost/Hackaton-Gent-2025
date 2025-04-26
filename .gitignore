@@ -1,3 +1,5 @@
 # Verbergt API keys
 API.json
 __pycache__
+rapporten/*
+!rapporten/rapportSplitter
