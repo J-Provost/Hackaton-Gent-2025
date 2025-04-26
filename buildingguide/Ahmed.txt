@@ -1,0 +1,1 @@
+Task Title=Cross the River Challenge,Role=Communicator,Individual Score=2,Team Score=8,Individual Feedback=Poor,Team Feedback=Great|Task Title=Build a Raft Challenge,Role=Safety Officer,Individual Score=5,Team Score=4,Individual Feedback=Alright,Team Feedback=Poor
