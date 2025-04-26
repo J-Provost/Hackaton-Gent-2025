@@ -97,3 +97,38 @@ async function submitFantasyTeam() {
       alert("❌ Serverfout. Controleer of Flask server actief is!");
     }
 }
+
+async function loadUsers() {
+    try {
+      const response = await fetch('http://127.0.0.1:5000/employees');
+      const employees = await response.json();
+  
+      const container = document.getElementById('users-list');
+      container.innerHTML = '';
+  
+      employees.forEach(emp => {
+        const userHTML = `
+          <div class="user-item">
+            <div class="user-item-overlay"></div>
+            <div class="user-item-content">
+              <div class="user-avatar">
+                <img src="${emp.photo}" class="avatar-img" alt="Foto van ${emp.name}" />
+              </div>
+              <div class="user-info">
+                <span class="user-overline">Monteur</span>
+                <h3 class="user-name">${emp.name}</h3>
+              </div>
+            </div>
+          </div>
+        `;
+        container.insertAdjacentHTML('beforeend', userHTML);
+      });
+    } catch (error) {
+      console.error("❌ Kon werknemerslijst niet laden:", error);
+    }
+  }
+  
+  // Start het laden van de werknemers
+  loadUsers();
+  
+  

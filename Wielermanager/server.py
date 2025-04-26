@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from employee import Employee
 from wieler_manager import FantasyTeam
 from leaderboard import Leaderboard
@@ -7,10 +7,8 @@ import json
 import os
 from flask_cors import CORS
 
-
 app = Flask(__name__)
 CORS(app)
-
 
 # Werknemers lijst
 employees = [Employee(name) for name in ["Ralph", "Sven", "Lisa", "Kenny", "Fatima"]]
@@ -24,14 +22,7 @@ if os.path.exists(votes_file):
     with open(votes_file, "r", encoding="utf-8") as f:
         votes = json.load(f)
 else:
-    votes = {
-        "time_value": {},
-        "coffee": {},
-        "tires_changed": {},
-        "returns": {},
-        "service_score": {},
-        "lateness": {}
-    }
+    votes = {category: {} for category in ["time_value", "coffee", "tires_changed", "returns", "service_score", "lateness"]}
 
 # Leaderboard bestand
 leaderboard = Leaderboard()
@@ -57,18 +48,12 @@ def submit_team():
     # Update scores
     leaderboard.calculate_scores(employees)
 
-    # Update leaderboard JSON
-    export_data = {
-        name: {
-            "picks": team.picks,
-            "score": team.score
-        }
-        for name, team in leaderboard.teams.items()
-    }
+    # Save leaderboard
+    export_data = {name: {"picks": team.picks, "score": team.score} for name, team in leaderboard.teams.items()}
     with open("Wielermanager/Front-end/leaderboard_data.json", "w", encoding="utf-8") as f:
         json.dump(export_data, f, indent=4)
 
-    # Update votes JSON
+    # Update votes
     for category, employee_name in picks.items():
         if employee_name not in votes[category]:
             votes[category][employee_name] = 0
@@ -78,6 +63,27 @@ def submit_team():
         json.dump(votes, f, indent=4)
 
     return jsonify({"message": "Success!"}), 200
+
+photos_urls = {
+    "Ralph": "http://127.0.0.1:5000/pictures/Ralph.jpg",
+    "Quinten": "http://127.0.0.1:5000/pictures/Quinten.jpg",
+    "Jelle": "http://127.0.0.1:5000/pictures/Jelle.jpg",
+    "David": "http://127.0.0.1:5000/pictures/David.jpg",
+    "Ahmed": "http://127.0.0.1:5000/pictures/Ahmed.jpg",
+    "Elian": "http://127.0.0.1:5000/pictures/Elian.jpg"
+}
+
+@app.route('/pictures/<path:filename>')
+def serve_picture(filename):
+    return send_from_directory('Front-end/Pictures', filename)
+
+@app.route('/employees', methods=['GET'])
+def get_employees():
+    employees_data = []
+    for name in job_data.keys():
+        photo = photos_urls.get(name, "http://127.0.0.1:5000/pictures/default.jpg")
+        employees_data.append({"name": name, "photo": photo})
+    return jsonify(employees_data)
 
 if __name__ == "__main__":
     app.run(debug=True)
