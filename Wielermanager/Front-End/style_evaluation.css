@@ -332,6 +332,10 @@ hr {
 
     }
 
+    .logo {
+        display: block;
+        margin: 0 auto;
+    }
 
     .brand-name {
         display: flex;
@@ -341,6 +345,7 @@ hr {
     }
 
     .main-title {
+        font-size: 2.5em;
         padding: 20px;
     }
 
@@ -350,6 +355,7 @@ hr {
 
     .file-action-card {
         flex-direction: column;
+        margin: 0 30px;
 
     }
 
