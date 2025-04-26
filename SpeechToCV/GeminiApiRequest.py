@@ -34,7 +34,8 @@ def GeminiApiRequestAudio(audio_file_path):
     )
 
     print(response.text)
-    with open("Hackaton-Gent-2025/SpeechToCV/result.md", "w") as file:
-        file.write(response.text[12:-6])
+    return response.text[12:-6]
+    # with open("Hackaton-Gent-2025/SpeechToCV/result.md", "w") as file:
+    #     file.write(response.text[12:-6])
 
 GeminiApiRequestAudio("Hackaton-Gent-2025/SpeechToCV/Silence Wench.mp3")
