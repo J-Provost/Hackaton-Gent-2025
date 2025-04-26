@@ -3,29 +3,34 @@
 
 **Summary**
 
-Recent Marketing graduate from the University of Washington with internship experience in digital marketing and retail. Proven ability to develop and execute successful social media campaigns, leveraging data analytics to optimize performance. Passionate about branding, storytelling, and contributing to innovative and collaborative marketing teams.
+Recent Marketing graduate from the University of Washington with experience in content creation, social media strategy, and email marketing campaigns. Passionate about branding and storytelling, with a proven track record of driving engagement and boosting website traffic. Proficient in utilizing analytics tools for data-driven recommendations. Eager to contribute to innovative and collaborative marketing environments.
 
 **Education**
 
-*   **University of Washington** - Bachelor of Arts in Marketing | [Graduation Date]
+*   **University of Washington** | [City, State] | Bachelor of Arts in Marketing | [Graduation Date]
 
 **Experience**
 
-*   **[Retail Brand Name]** - Marketing Intern | [Dates of Internship]
-    *   Led a social media campaign for a product launch resulting in a **35% increase in engagement** and boosted website traffic.
-    *   Developed content calendar and collaborated with the design team on visual assets.
-    *   Tracked campaign analytics and provided data-driven insights.
-*   **[Digital Marketing Agency Name]** - Marketing Intern | [Dates of Internship]
-    *   Focused on content creation, social media strategy, and email marketing campaigns.
-    *   [Add a quantifiable achievement or responsibility here if possible]
+*   **[Retail Brand Name]** | Marketing Intern | [City, State] | [Dates of Internship]
+    *   Led a social media campaign for a product launch resulting in a 35% increase in engagement and boosted website traffic.
+    *   Developed content calendar and collaborated with design team on visuals.
+    *   Tracked and analyzed campaign performance.
+*   **[Digital Marketing Agency Name]** | Marketing Intern | [City, State] | [Dates of Internship]
+    *   [Briefly describe responsibilities, 1-2 bullet points]
+        *   Focused on content creation, social media strategy, and email marketing campaigns.
+        *   [Example: Assisted in developing and executing email marketing campaigns, resulting in a X% increase in click-through rates.]
 
 **Skills**
 
-*   **Marketing:** Social Media Marketing, Content Creation, Email Marketing, Campaign Management, Branding, Storytelling, Market Research
-*   **Analytics:** Google Analytics, HubSpot, Hootsuite Analytics
-*   **Software:** Microsoft Office Suite, [Add other relevant software here e.g., Adobe Creative Suite]
-*   **Other:** Communication, Collaboration, Problem-Solving, Data Analysis, Strategic Thinking
+*   **Marketing:** Content Creation, Social Media Strategy, Email Marketing, Branding, Campaign Management, Storytelling
+*   **Analytics:** Google Analytics, HubSpot, Hootsuite Reporting
+*   **Software:** [List relevant software like Microsoft Office Suite, Adobe Creative Suite, etc.]
+*   **Other:** Communication, Collaboration, Problem-solving, Data Analysis, Adaptability
 
 **Projects**
 
-*   [Optionally include a link to a specific project, or a short description of a project outside of your professional experience
+*   [Optional: Briefly describe other relevant marketing projects]
+
+**References**
+
+*   Available upon request
