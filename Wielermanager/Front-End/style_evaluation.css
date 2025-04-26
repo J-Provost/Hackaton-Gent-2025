@@ -99,7 +99,7 @@ body {
 }
 
 hr {
-    margin: 6px 0;
+    margin: 6px;
 }
 
 .file-actions {
@@ -258,11 +258,19 @@ hr {
 }
 
 .social-icon {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 40px;
     height: 40px;
     border-radius: 4px;
     background-color: #ffcf3b;
+    text-decoration: none;
+    color: #000;
+}
+
+.social-icon i {
+    font-size: 18px;
 }
 
 .copyright {
@@ -309,12 +317,40 @@ hr {
         padding: 10px;
     }
 
-    .main-nav {
-        display: none;
-    }
-
     .main-content {
         padding: 0px;
+    }
+
+    .main-nav {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .main-description {
+        font-size: 20px;
+
+    }
+
+
+    .brand-name {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .main-title {
+        padding: 20px;
+    }
+
+    .notice-title {
+        padding: 10px 20px;
+    }
+
+    .file-action-card {
+        flex-direction: column;
+
     }
 
     .site-footer {
@@ -323,6 +359,14 @@ hr {
 
     .footer-nav-list {
         gap: 4px;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        width: 100%;
+
     }
 }
 
